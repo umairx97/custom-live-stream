@@ -74,6 +74,17 @@ export class App extends Component {
     mediaRecorder.start()
   }
 
+  handleScreenShare = async () => { 
+    const displayMediaOptions = {
+      video: {
+        cursor: "always"
+      },
+      audio: true
+    };
+
+    const stream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
+    this.handleSuccess(stream)
+  }
   render () {
     return (
       <div>
@@ -82,6 +93,7 @@ export class App extends Component {
           <button onClick={this.handleStartStream}>Play</button>
           <button onClick={this.handlePauseStream}>Pause</button>
           <button onClick={this.handleDoScreenshot}>Screenshot</button>
+          <button onClick={this.handleScreenShare}>Share Screen</button>
         </div>
         <a href='/#' id='download'>Download</a>
 

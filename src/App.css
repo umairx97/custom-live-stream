@@ -41,22 +41,17 @@ video {
 .controls button:nth-child(1) {
   border: 2px solid #D2002E;
 }
-.controls button:nth-child(1) svg {
-  color: #D2002E;
-}
 
 .controls button:nth-child(2) {
   border: 2px solid #008496;
-}
-.controls button:nth-child(2) svg {
-  color: #008496;
 }
 
 .controls button:nth-child(3) {
   border: 2px solid #00B541;
 }
-.controls button:nth-child(3) svg {
-  color: #00B541;
+
+.controls button:nth-child(4) {
+  border: 2px solid #eef10c;
 }
 
 .controls > button:hover svg {
